@@ -1,6 +1,5 @@
 var characterLenght = 8;
 var choiceArr = [];
-
 var specialCharArr = ['!','@','?','&','%','$','#'];
 var lowerCaseArr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var upperCaseArr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
@@ -10,22 +9,17 @@ var numberArr = ['1','2','3','4','5','6','7','8','9','0'];
 var generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button
-
-const button = document.querySelector('button');
-generateBtn.addEventListener("click", writePassword = {
-  button,textContent = `Click count: ${writePassword}`
-});
+  generateBtn.addEventListener("click", writePassword);
 
 
 // Write password to the #password input
 function writePassword() {
   var correctPrompts = getPromts("true or false"); 
   var passwordText = document.querySelector("#password");
- 
 
   if (correctPrompts) {
-    passwordText.value = "newPassword";
     var newPassword = generatePassword();
+    passwordText.value = newPassword;
   } else {
     passwordText.value = "";
   }
@@ -36,14 +30,14 @@ function generatePassword(){
 var password = "";
 for(var i = 0; i < characterLenght; i++){
   var randomIndex = Math.floor(Math.random() * choiceArr.length);
-  generatePassword = password + choiceArr[randomIndex];
+  password = password + choiceArr[randomIndex];
 }
-return password;}
+return password;
+}
 
 
 function getPromts() {
-  var choiceArr = [];
-
+  choiceArr = [];
   characterLenght = parseInt(prompt("How many characters do you want your password to be? (8 - 128 characters")); 
 
   if(isNaN(characterLenght) || characterLenght < 8 || characterLenght > 128){ 
@@ -62,4 +56,5 @@ function getPromts() {
   if (confirm("would you like number in your password?")) {
     choiceArr = choiceArr.concat(numberArr);
   }
-  return true;}
+  return true;
+};
