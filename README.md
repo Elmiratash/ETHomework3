@@ -1,9 +1,14 @@
 # ETHomework3
 Password Generator
 
-For this homework I have html file and css file and just I should work on javascript file and run the generator.
-I google a lot and reaserch and start.
 
-Start with list of "var" that I think need it for password generator.
-and then go with functions. 
-Run the program cuple of time but still have a problem that im looking to fix it. 
+This program generate a new and secure random password.
+for this project I have html and css file and just work on js file.
+start with write some code that im sure about it.
+add more after some reaserch and check it if its work.
+need some changes to fix my error. 
+finally after many times check and check the code finally found the error.
+
+
+
+
